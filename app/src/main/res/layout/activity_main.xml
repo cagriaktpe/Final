@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editableArg1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="arg1"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editableArg2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="arg2"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/editableArg1"
+        app:layout_constraintStart_toStartOf="@+id/editableArg1"
+        app:layout_constraintTop_toBottomOf="@+id/editableArg1" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ADD ENTRY"
+        app:layout_constraintEnd_toEndOf="@+id/editableArg2"
+        app:layout_constraintStart_toStartOf="@+id/editableArg2"
+        app:layout_constraintTop_toBottomOf="@+id/editableArg2" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SAVE DATA"
+        app:layout_constraintEnd_toEndOf="@+id/addButton"
+        app:layout_constraintStart_toStartOf="@+id/addButton"
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CLEAR LIST"
+        app:layout_constraintEnd_toEndOf="@+id/invertButton"
+        app:layout_constraintStart_toStartOf="@+id/invertButton"
+        app:layout_constraintTop_toBottomOf="@+id/invertButton" />
+
+    <Button
+        android:id="@+id/invertButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="INVERT VALUES"
+        app:layout_constraintEnd_toEndOf="@+id/saveButton"
+        app:layout_constraintStart_toStartOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton" />
+
+    <ListView
+        android:id="@+id/myListView"
+        android:layout_width="409dp"
+        android:layout_height="447dp"
+        android:layout_marginTop="4dp"
+        android:divider="@color/black"
+        android:dividerHeight="2dp"
+        android:listSelector="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clearButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
